@@ -1,5 +1,8 @@
 {
   "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "mqtt": "^4.3.7",
     "socket.io-client": "0.9.16",

@@ -1,0 +1,12 @@
+{
+    "serialnumber": "1234",
+    "pin": "1234",
+    "url": "my.enervent.com",
+    "device_model": "Pandion",
+    "device_id": "pandion",
+    "mqtt_server": "core-mosquitto",
+    "mqtt_user": "mqtt",
+    "mqtt_pass": "mqtt",
+    "mqtt_client_id": "enervent",
+    "mqtt_discovery_prefix": "homeassistant"
+ }

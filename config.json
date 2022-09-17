@@ -1,0 +1,32 @@
+{
+  "name": "Enervent EAir Cloud",
+  "description": "Manage your HVAC through my.enervent.com from HomeAssistant.",
+  "version": "1.0.0",
+  "slug": "enervent_eair_cloud",
+  "init": false,
+  "options": {
+    "serialnumber": "1234",
+    "pin": "1234",
+    "url": "my.enervent.com",
+    "device_model": "Pandion",
+    "device_id": "pandion",
+    "mqtt_server": "core-mosquitto",
+    "mqtt_user": "mqtt",
+    "mqtt_pass": "mqtt",
+    "mqtt_client_id": "enervent",
+    "mqtt_discovery_prefix": "homeassistant"
+  },
+  "schema": {
+    "serialnumber": "str",
+    "pin": "str",
+    "url": "str",
+    "device_model": "str",
+    "device_id": "str",
+    "mqtt_server": "str",
+    "mqtt_user": "str",
+    "mqtt_pass": "password",
+    "mqtt_client_id": "str",
+    "mqtt_discovery_prefix": "str"
+  },
+  "arch": ["aarch64","amd64","armhf","armv7","i386"]
+}
