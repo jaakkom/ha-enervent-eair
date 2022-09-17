@@ -6,12 +6,12 @@ import mqtt from 'mqtt' // Data to homeassistant
 import http from 'http' // Commands to enervent
 
 //const httpserver = http.createServer(requestListener);
-/*const client  = mqtt.connect(process.env.MQTT_SERVER, {
+const client  = mqtt.connect(process.env.MQTT_SERVER, {
     clientId: process.env.MQTT_CLIENT_ID,
     username: process.env.MQTT_USER,
     password: process.env.MQTT_PASSWORD,
 })
-
+/*
 const devId = process.env.DEVICE_ID
 const baseTopic = process.env.MQTT_DISCOVERY_PREFIX + '/sensor/'
 const stateTopic= baseTopic + devId
@@ -55,6 +55,7 @@ socket.on("disconnect", () => {
 }),
 socket.on("connect", () => {
     console.log('Connected to ' + url)
+    console.log('Using serial: ' + serialNumber + ' and pin: ' + pin)
 }),
 socket.on("error", (e) => {
     console.log('Error: ', e)
@@ -73,7 +74,7 @@ function handleMessage(msg) {
     msg.data.registers.forEach((element, index) => {
         if(element in registers) {
             currentData[registers[element].symbol] = msg.data.data[index] / registers[element].multiplier
-            console.debug(currentData);
+            console.log(currentData);
 
             if(!dumpDone) {
                 var dumpCMD = {type: "ucp",dst: mac, data:{type: "command",device: mac,command: "dump"}}
@@ -82,7 +83,9 @@ function handleMessage(msg) {
             }
         }
     });
-  } 
+  } else {
+    console.log(msg)
+  }
 }
 
 function sendMessage(msg) {
