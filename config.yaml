@@ -1,0 +1,11 @@
+name: "Enervent EAir Cloud"
+description: "Manage your HVAC through my.enervent.com from HomeAssistant."
+version: "1.0.0"
+slug: "enervent_eair_cloud"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
