@@ -5,6 +5,7 @@ export SERIALNUMBER="$(jq --raw-output '.serialnumber' $CONFIG_PATH)"
 export PIN="$(jq --raw-output '.pin' $CONFIG_PATH)"
 export URL="$(jq --raw-output '.url' $CONFIG_PATH)"
 export DEVICE_ID="$(jq --raw-output '.device_id' $CONFIG_PATH)"
+export DEVICE_MODEL="$(jq --raw-output '.device_model' $CONFIG_PATH)"
 
 export MQTT_SERVER="$(jq --raw-output '.mqtt_server' $CONFIG_PATH)"
 export MQTT_USER="$(jq --raw-output '.mqtt_user' $CONFIG_PATH)"
